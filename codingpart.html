@@ -121,12 +121,58 @@
             flex-grow: 1;
             margin: 0 20px;
         }
+
+        .coding {
+            margin-top: 60px;
+        }
+
+        /* Style for the left content */
+        .left-content {
+            overflow-y: scroll;
+            /* Only vertical scrollbar */
+            height: 100%;
+            /* Full height of the parent */
+            width: 50%;
+            /* Half width of the screen */
+        }
+
+        /* Style for the feedback section */
+        .feedback {
+            position: relative;
+        }
+
+        .btn-yes,
+        .btn-no {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        /* Style for the right content */
+        .right-content {
+            height: 100%;
+            /* Full height of the parent */
+            width: 50%;
+            /* Half width of the screen */
+        }
+
+        /* Style for the outer right div */
+        .bg-gray-200 {
+            /* Background color and any other styling */
+        }
+
+        .left-content {
+            overflow-y: scroll;
+            /* Only vertical scrollbar */
+            height: 80vh;
+            /* Adjust height as needed */
+        }
     </style>
 </head>
 
 <body class="bg-gray-100">
 
-    <nav class="bg-white shadow-lg">
+    <nav class="bg-white shadow-lg fixed w-full z-10 top-0">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -309,10 +355,29 @@
     </div>
 
     <!-- Main content -->
-    <div class="p-4">
-        
-
+    <div class="p-4 px-4 coding flex border-2 border-gray-500 h-screen">
+        <!-- Left Content -->
+        <div class="left-content mr-4 overflow-scroll h-full w-1/2 border-r-2 border-gray-500">
+            <div>
+                <h1 class="text-xl font-bold mb-2">Course Name</h1>
+                <h2 class="text-lg font-semibold mb-2">Topic Heading</h2>
+                <p class="mb-4">Some text describing the topic goes here.</p>
+                <img src="https://cdn.programiz.pro/course-images/sql-basics/sql1-2.1.1.png" alt="Course Image"
+                    class="mb-4">
+                <!-- <div class="feedback text-right">
+                    <p>Was this helpful?</p>
+                    <button class="btn-yes mr-2">Yes</button>
+                    <button class="btn-no">No</button>
+                </div> -->
+            </div>
+        </div>
+        <!-- Right Content -->
+        <div class="right-content flex-grow bg-gray-200 p-4 h-full w-1/2">
+            compiler goes here
+        </div>
     </div>
+
+
 
 
     <footer class="footer bg-red-500 py-4 px-6 flex items-center justify-between  border-2 shadow-xl">
@@ -325,9 +390,12 @@
         <div class="lesson-progress">
             <div class="bar-container">
                 <a class="bar" href="https://github.com/shreyshah173/ProgramPage"></a>
-                <a class="bar" href="https://www.msn.com/en-in/health/health-news/kerala-reports-41-deaths-due-to-leptospirosis-check-here-the-symptoms-and-preventive-measures/ar-BB1n6OaM?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=20"></a>
-                <a class="bar" href="https://www.msn.com/en-in/money/topstories/ekadanta-sankashti-chaturthi-2024-date-time-rituals-and-significance/ar-BB1n4nU2?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=27"></a>
-                <a class="bar" href="https://www.msn.com/en-in/health/health-news/five-body-pains-that-can-indicate-a-heart-attack/ar-BB1n3QdA?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=8"></a>
+                <a class="bar"
+                    href="https://www.msn.com/en-in/health/health-news/kerala-reports-41-deaths-due-to-leptospirosis-check-here-the-symptoms-and-preventive-measures/ar-BB1n6OaM?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=20"></a>
+                <a class="bar"
+                    href="https://www.msn.com/en-in/money/topstories/ekadanta-sankashti-chaturthi-2024-date-time-rituals-and-significance/ar-BB1n4nU2?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=27"></a>
+                <a class="bar"
+                    href="https://www.msn.com/en-in/health/health-news/five-body-pains-that-can-indicate-a-heart-attack/ar-BB1n3QdA?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=8"></a>
 
             </div>
         </div>
@@ -338,7 +406,7 @@
         </button>
     </footer>
 
-    
+
 
     <!-- Scripts -->
     <script>
@@ -421,6 +489,7 @@
                 bar.classList.add('active');
             });
         });
+
     </script>
 
 </body>
