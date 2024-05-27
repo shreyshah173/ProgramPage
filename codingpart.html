@@ -41,26 +41,21 @@
             display: flex;
             align-items: center;
             border: 1px solid #D1D5DB;
-            /* Gray-300 */
             padding: 0.5rem 1rem;
-            /* Adjust padding as needed */
             transition: border-color 0.3s ease;
         }
 
         #course-outline:hover {
             border-color: #0400ff;
             background-color: #e0e0ea;
-            /* Green-500 */
         }
 
         #course-outline svg {
             width: 24px;
             height: 24px;
             margin-right: 0.5rem;
-            /* Space between icon and text */
         }
 
-        /* Style for the footer */
         .footer {
             position: fixed;
             bottom: 0;
@@ -69,54 +64,39 @@
             background-color: #f0f0f0;
         }
 
-        /* Style for the lesson buttons */
         .lesson-button {
             border: 1px solid #999999;
             cursor: pointer;
         }
 
-        /* Style for the bars */
         .bar-container {
             display: flex;
             justify-content: space-between;
         }
 
-        /* Style for the bars */
-        /* Style for the bars */
         .bar-container {
             display: flex;
             justify-content: center;
-            /* Center the capsules horizontally */
             align-items: center;
-            /* Center the capsules vertically */
             gap: 5px;
-            /* Adjust the space between capsules */
         }
 
         .bar {
             width: 45px;
-            /* Change width to adjust height after rotation */
             height: 25px;
-            /* Change height to adjust width after rotation */
             background-color: white;
             border-radius: 15px;
             cursor: pointer;
-            /* transition: background-color 0.3s ease; */
-            /* transform: rotate(-90deg); */
-            /* Rotate the capsules by 90 degrees counter-clockwise */
         }
 
-        /* Hover effect for the bars */
         .bar:hover {
             background-color: lightblue;
         }
 
         .bar:visited {
             background-color: #3b82f6;
-            /* Change to bg-blue-500 */
         }
 
-        /* Style for the lesson progress bar */
         .lesson-progress {
             flex-grow: 1;
             margin: 0 20px;
@@ -126,17 +106,12 @@
             margin-top: 60px;
         }
 
-        /* Style for the left content */
         .left-content {
             overflow-y: scroll;
-            /* Only vertical scrollbar */
             height: 100%;
-            /* Full height of the parent */
             width: 50%;
-            /* Half width of the screen */
         }
 
-        /* Style for the feedback section */
         .feedback {
             position: relative;
         }
@@ -148,24 +123,24 @@
             cursor: pointer;
         }
 
-        /* Style for the right content */
         .right-content {
             height: 100%;
-            /* Full height of the parent */
             width: 50%;
-            /* Half width of the screen */
-        }
-
-        /* Style for the outer right div */
-        .bg-gray-200 {
-            /* Background color and any other styling */
         }
 
         .left-content {
             overflow-y: scroll;
-            /* Only vertical scrollbar */
             height: 80vh;
-            /* Adjust height as needed */
+        }
+
+        @media  (max-width: 800px) {
+            .left-content {
+                width: 100%;
+            }
+            
+            .right-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -355,39 +330,36 @@
     </div>
 
     <!-- Main content -->
-    <div class="p-4 px-4 coding flex border-2 border-gray-500 h-screen">
+    <div class="p-4 px-4 coding flex flex-col md:flex-row border-2 border-gray-500 h-screen">
         <!-- Left Content -->
-        <div class="left-content mr-4 overflow-scroll h-full w-1/2 border-r-2 border-gray-500">
+        <div class="left-content mr-4 mb-4 sm:mb-0 overflow-scroll h-1/2 sm:h-full w-full sm:w-full border-r-2 border-gray-500">
             <div>
                 <h1 class="text-xl font-bold mb-2">Course Name</h1>
                 <h2 class="text-lg font-semibold mb-2">Topic Heading</h2>
                 <p class="mb-4">Some text describing the topic goes here.</p>
                 <img src="https://cdn.programiz.pro/course-images/sql-basics/sql1-2.1.1.png" alt="Course Image"
                     class="mb-4">
-                <!-- <div class="feedback text-right">
-                    <p>Was this helpful?</p>
-                    <button class="btn-yes mr-2">Yes</button>
-                    <button class="btn-no">No</button>
-                </div> -->
             </div>
         </div>
         <!-- Right Content -->
-        <div class="right-content flex-grow bg-gray-200 p-4 h-full w-1/2">
+        <div class="right-content bg-gray-200 p-4 w-full sm:w-full md:w-1/2">
             compiler goes here
         </div>
     </div>
+    
 
 
 
 
-    <footer class="footer bg-red-500 py-4 px-6 flex items-center justify-between  border-2 shadow-xl">
+
+    <footer class="footer bg-red-500 py-4 px-3 sm:px-6 flex items-center justify-between border-2 shadow-xl">
         <!-- Previous Lesson Button -->
-        <button class="lesson-button border border-gray-500 px-3 py-1 rounded-md flex items-center">
-            <span>&lt;</span> Previous Lesson
+        <button class="lesson-button border border-gray-500 px-2 py-1 rounded-md text-sm flex items-center">
+            <span>&lt;</span> Prev Lesson
         </button>
 
         <!-- Lesson Progress Bar -->
-        <div class="lesson-progress">
+        <div class="lesson-progress hidden sm:block">
             <div class="bar-container">
                 <a class="bar" href="https://github.com/shreyshah173/ProgramPage"></a>
                 <a class="bar"
@@ -396,15 +368,15 @@
                     href="https://www.msn.com/en-in/money/topstories/ekadanta-sankashti-chaturthi-2024-date-time-rituals-and-significance/ar-BB1n4nU2?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=27"></a>
                 <a class="bar"
                     href="https://www.msn.com/en-in/health/health-news/five-body-pains-that-can-indicate-a-heart-attack/ar-BB1n3QdA?ocid=msedgntp&pc=ASTS&cvid=f4ab0027684d41558049c522b90fd838&ei=8"></a>
-
             </div>
         </div>
 
         <!-- Next Lesson Button -->
-        <button class="lesson-button bg-blue-500 text-white px-3 py-1 rounded-md flex items-center">
+        <button class="lesson-button bg-blue-500 text-white px-2 py-1 rounded-md text-sm flex items-center">
             Next Lesson <span>&gt;</span>
         </button>
     </footer>
+
 
 
 
