@@ -142,6 +142,14 @@
                 width: 100%;
             }
         }
+
+        .hover-blue-500 {
+            border: 2px solid white;
+        }
+        .hover-blue-500:hover{
+            border:2px solid #00ffd1bd;
+            background-color: #e4fffe;
+        }
     </style>
 </head>
 
@@ -238,15 +246,65 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Profile -->
-                    <a href="#" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
+                    <!-- profile  -->
+                    <div class="relative">
+                        <a href="#" id="profile-icon" class="text-gray-800 px-3 py-2 rounded-md text-sm font-medium">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                        <!-- Profile Popup -->
+                        <div id="profile-popup"
+                            class="hidden absolute right-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-64 z-20">
+                            <!-- Changed w-64 to w-80 for wider box -->
+                            <div class="p-4">
+                                <ul class="mt-2">
+                                    <li class="px-4 py-2 border-b border-gray-200 flex justify-between items-center hover-blue-500 checkhover">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="px-4 py-2 border-b border-gray-200 flex justify-between items-center hover-blue-500">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                            <span>Upgrade to Pro</span>
+                                        </a>
+                                    </li>
+                                    <li class="px-4 py-2 border-b border-gray-200 flex justify-between items-center hover-blue-500">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M516 673c0 4.4 3.4 8 7.5 8h185c4.1 0 7.5-3.6 7.5-8v-48c0-4.4-3.4-8-7.5-8h-185c-4.1 0-7.5 3.6-7.5 8v48zm-194.9 6.1l192-161c3.8-3.2 3.8-9.1 0-12.3l-192-160.9A7.95 7.95 0 0 0 308 351v62.7c0 2.4 1 4.6 2.9 6.1L420.7 512l-109.8 92.2a8.1 8.1 0 0 0-2.9 6.1V673c0 6.8 7.9 10.5 13.1 6.1zM880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z"></path></svg>
+                                            <span>My Playgrounds</span>
+                                        </a>
+                                    </li>
+                                    <li class="px-4 py-2 border-b border-gray-200 flex justify-between items-center hover-blue-500">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                                            <span>Account Settings</span>
+                                        </a>
+                                    </li>
+                                    <li class="px-4 py-2 border-b border-gray-200 flex justify-between items-center hover-blue-500">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                                            <span>Help Center</span>
+                                        </a>
+                                    </li>
+                                    <li class="px-4 py-2 flex justify-between items-center hover-blue-500">
+                                        <a href="#" class="flex items-center">
+                                            <svg stroke="currentColor" class="w-5 h-5 mr-2" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                            <span>Logout</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -443,6 +501,14 @@
         notificationIcon.addEventListener('click', () => {
             notificationPopup.classList.toggle('hidden');
         });
+
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('hidden');
+        });
+
 
         document.addEventListener('click', (event) => {
             const isClickInside = notificationIcon.contains(event.target) || notificationPopup.contains(event.target);
